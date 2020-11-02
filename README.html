@@ -1,0 +1,912 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/philyoh/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.5.13/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <p><strong>Author:</strong> <a href="https://github.com/philrussel21">Phil Antiporda</a></p>
+<h1 class="mume-header" id="table-of-contents">Table of Contents</h1>
+
+<ol>
+<li><a href>Overview and Description of a standard source control process</a></li>
+</ol>
+<h1 class="mume-header" id="t3a1-workbook-term-3">T3A1 - Workbook Term 3</h1>
+
+<p><a href="https://github.com/philrussel21/t3a1">Link to Repo</a></p>
+<h2 class="mume-header" id="q1-provide-an-overview-and-description-of-a-standard-source-control-process-for-a-large-project">Q1 Provide an overview and description of a standard source control process for a large project.</h2>
+
+<p>Source control, or as commonly referred to as version control, is by definition the process of tracking and managing the history and changes of the project&#x2019;s or application&#x2019;s codebase. It allows going back in time to view source codes at various points of a codebase&#x2019;s history. Source control systems also make collaborations between teams of developers a lot easier by allowing them to work simultaneously on the same source file and the ability to resolve code conflicts.</p>
+<p>For my recent Rails App project, I used Git as the source control system which is an open-sourced distributed source control system that embodies all the above characteristics. This app, with its independent project nature, applies the Feature Branch workflow as its core source control process.</p>
+<p>All features of the app took place in a dedicated branch instead of the master branch. This means that the app&#x2019;s master branch will never contain broken code and would only have tested and working code. This also gave me, as its creator, the opportunity to decide on a feature before it gets integrated into the app&#x2019;s master branch. It also allowed me to experiment and explore alternative features without ruining the official project.</p>
+<h5 class="mume-header" id="sources">Sources</h5>
+
+<ul>
+<li><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow">Source 1</a></li>
+<li><a href="https://aws.amazon.com/devops/source-control/">Source 2</a></li>
+</ul>
+<h2 class="mume-header" id="q2-what-are-the-most-important-aspects-of-quality-software">Q2 What are the most important aspects of quality software?</h2>
+
+<p>ISO is an independent, non-governmental international organization that brings together experts to share knowledge and develop voluntary, consensus-based, market relevant International Standards that support innovation and provide solutions to global challenges in the technology industry. ISO has a series of standards also known as SQuaRE (System and Software Quality Requirements and Evaluation) that goals to create a framework to evaluate the quality of a software. These evaluations would be based on the following eight quality characteristics:</p>
+<ul>
+<li>
+<p>Functional Suitability</p>
+<ul>
+<li>This characteristic aims to describe the ability of the software to address its purpose. It also covers how the software was able to meet the user&apos;s objectives and specifics behind the usage of the software.</li>
+</ul>
+</li>
+<li>
+<p>Performance Efficiency</p>
+<ul>
+<li>The behaviour of the app&#x2019;s performance relative to the amount of resources used in stated conditions. This involves time consumed during processing and responding, the apps&#x2019; usage of its resources and overall capacity of the software to perform its tasks.</li>
+</ul>
+</li>
+<li>
+<p>Compatibility</p>
+<ul>
+<li>The characteristic of the software&#x2019;s behaviour when used and its resources shared with other softwares to measure its suitability without negative impact to itself and to other softwares.</li>
+</ul>
+</li>
+<li>
+<p>Usability</p>
+<ul>
+<li>Rates the software&#x2019;s overall usability by its recognizability against other softwares, ease of learning the usage of the software and operating the software while protecting users from making errors. This also includes user&#x2019;s interaction, their experience when using the software and its accessibility across different variety of devices.</li>
+</ul>
+</li>
+<li>
+<p>Reliability</p>
+<ul>
+<li>This aspect is the software&#x2019;s ability to have reliable information to serve its purpose.</li>
+</ul>
+</li>
+<li>
+<p>Security</p>
+<ul>
+<li>The characteristic of a software to protect its information, data and the software itself overall.</li>
+</ul>
+</li>
+<li>
+<p>Maintainability</p>
+<ul>
+<li>Ability of the software to be effectively and efficiently modified or improved to correct or to adapt to changes in the environment or its requirements.</li>
+</ul>
+</li>
+<li>
+<p>Portability</p>
+<ul>
+<li>Software&#x2019;s ability to be transferable from one hardware or operational environment to another without corruption and while maintaining its integrity.</li>
+</ul>
+</li>
+</ul>
+<h5 class="mume-header" id="sources-1">Sources</h5>
+
+<ul>
+<li><a href="https://iso25000.com/index.php/en/iso-25000-standards/iso-25010?limit=3&amp;limitstart=0">Source 1</a>
+<ul>
+<li>![Software Product Quality](&quot;./docs/Software Product Quality.png&quot;)</li>
+</ul>
+</li>
+<li><a href="https://iso25000.com/index.php/en/">Source 2</a></li>
+</ul>
+<h2 class="mume-header" id="q3-outline-a-standard-high-level-structure-for-a-mern-stack-application-and-explain-the-components">Q3 Outline a standard high level structure for a MERN stack application and explain the components</h2>
+
+<p>MERN Stack is the combination of four technologies MongoDB, Express, React and Node.js. Using these stack, developers are able to create a complete website, both front end and back end, by essentially just using one language: Javascript.</p>
+<ul>
+<li>
+<p>MongoDB</p>
+<ul>
+<li>A non-relational and document-oriented database that stores data in collections made out of individual documents. These documents are big JSON blob with no particular format, hence its non-relational nature. Since they are stored as JSONs, manipulating data using Javascript becomes relatively simple and easy.</li>
+</ul>
+</li>
+<li>
+<p>Express</p>
+<ul>
+<li>A web application framework for Node.js that simplifies the development and makes writing secure, modular and fast applications easier. One of its main uses is to create a REST API which then corresponds to a website that will retrieve data via HTTP requests.</li>
+</ul>
+</li>
+<li>
+<p>React</p>
+<ul>
+<li>A Javascript library developed by facebook. It is used to create the front-end part of a website while accelerating its loading speed. It also allows developers to create animations, uploads and other transitions faster.</li>
+</ul>
+</li>
+<li>
+<p>Node.js</p>
+<ul>
+<li>A Javascript runtime environment that allows Javascript code to execute outside a web browser. It uses an event-driven, non-blocking I/O model that makes it efficient specially for data-intensive real-time applications that run across different devices.</li>
+</ul>
+</li>
+</ul>
+<p>How It all fits together:<br>
+A web application consists of two parts: the front-end and the back-end.</p>
+<h3 class="mume-header" id="front-end">Front End</h3>
+
+<p>React is used to handle the creation of the overall front end. This would also include the execution of HTTP Requests and Ajax calls to render dynamic data without the need of reloading the page thus improving the overall speed of the app.</p>
+<h3 class="mume-header" id="back-end">Back End</h3>
+
+<p>This side is where the other techs MongoDB, Node.js and Express are used. MongoDB as its database manager, stores the data for the app. These data are created, read, modified and retrieved by the Express framework written in Node.js. These actions are being done in the URLs which are represented by functions with HTTP calls as the originators.</p>
+<h5 class="mume-header" id="sources-2">Sources</h5>
+
+<ul>
+<li>
+<p><a href="https://www.bocasay.com/how-does-the-mern-stack-work/">Source 1</a></p>
+<ul>
+<li>![MERN Stack](&quot;./docs/MERN Structure.png&quot;)</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.bocasay.com/what-is-the-mern-stack/">Source 2</a></p>
+</li>
+</ul>
+<h2 class="mume-header" id="q4-a-team-is-about-to-engage-in-a-project-developing-a-website-for-a-small-business-what-knowledge-and-skills-would-they-need-in-order-to-develop-the-project">Q4 A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?</h2>
+
+<p>Working as a team allows projects to be accomplished more in less time. By taking advantage of the strengths and expertise of different members, the team is able to create a top-notch product to meet the demands of its clients, and in this instance, a website for a small business. Having said that, below is the list of knowledge and skills that are recommended a team should have to achieve this goal.</p>
+<h3 class="mume-header" id="communication-skills">Communication Skills</h3>
+
+<ul>
+<li>A team should have effective communication skills both internal and external. Having this skill would enable collaboration between team members. Externally, this would allow liaising with clients about their needs with such ease.</li>
+</ul>
+<h3 class="mume-header" id="product-management">Product Management</h3>
+
+<ul>
+<li>Understanding the vision and demands of the client is one of the top priorities. Having a skill to liaise with the client and their visions, and to communicate that to the rest of the team is a must have in order to develop a successful product.</li>
+</ul>
+<h3 class="mume-header" id="design-user-interface-and-user-experience">Design, User Interface and User Experience</h3>
+
+<ul>
+<li>Understanding and improving the experience and &#x2018;feel&#x2019; of the product is as important as creating the actual product. The skill of product presentation through UI/UX can inspire and intrigue its users thus making a positive impact on the client&#x2019;s business overall.</li>
+</ul>
+<h3 class="mume-header" id="accessibility">Accessibility</h3>
+
+<ul>
+<li>Nowadays, everything in the world wide web can be accessed across different devices with distinct sizes. A team should have a person with the skill to make a product adaptable to these diverse devices while maintaining its design, UI and UX.</li>
+</ul>
+<h3 class="mume-header" id="security">Security</h3>
+
+<ul>
+<li>The benefits of reaching out in the world wide web as a platform for a business far outweighs the drawbacks it creates. That being said, creating a website exposes a business in a broader range of possible attacks. A team member should have a skill to secure the business&#x2019; system and their customer&#x2019;s privacy and data.</li>
+</ul>
+<h3 class="mume-header" id="testing">Testing</h3>
+
+<ul>
+<li>Team members must be aware and knowledgeable of testing their output for potential errors and bugs to meet expected behaviour. Not only does it satisfy clients and produce minimal to bug-free products, it would also be beneficial in collaboration among team members.</li>
+</ul>
+<h3 class="mume-header" id="established-tech-stack">Established Tech Stack</h3>
+
+<ul>
+<li>
+<p>There are multiple technology stacks a team could use to create a website. What&#x2019;s important is the team&#x2019;s ability to translate the specifics and requirements of the product through code. With the nature of the product being a website, a team should atleast have the following knowledge:</p>
+<ul>
+<li><strong>HTML</strong>
+<ul>
+<li>The standard markup language of the web to display documents and data.</li>
+</ul>
+</li>
+<li><strong>CSS</strong>
+<ul>
+<li>The design aspect of HTML.</li>
+</ul>
+</li>
+<li><strong>Javascript</strong>
+<ul>
+<li>A very powerful language used to make a dynamic website. Can be used to improve the overall design and behaviour of the product and also to allow transferring and manipulation of data through Node.js</li>
+</ul>
+</li>
+<li><strong>Git</strong>
+<ul>
+<li>A version-control system to track changes in source code during software development to allow collaboration between team members.</li>
+</ul>
+</li>
+<li><strong>Database</strong>
+<ul>
+<li>A team should have the knowledge to retrieve, create, read, edit, update and delete data stored in the database. Deciding for a relational or non-relational database would be according to the client&#x2019;s needs.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 class="mume-header" id="sourcehttpswwwascendlecominsightblog14-skills-your-app-development-team-must-have"><a href="https://www.ascendle.com/insight/blog/14-skills-your-app-development-team-must-have/">Source</a></h5>
+
+<h2 class="mume-header" id="q5-with-reference-to-one-of-your-own-projects-discuss-what-knowledge-or-skills-were-required-to-complete-your-project-and-to-overcome-challenges">Q5 With reference to one of your own projects, discuss what knowledge or skills were required to complete your project, and to overcome challenges</h2>
+
+<p><strong>Project:</strong> <a href="https://airgear-aerospace.herokuapp.com/">AirGear MarketPlace</a></p>
+<p>Below is the list of the knowledge and skills I was required to complete this project along with its challenges.</p>
+<h3 class="mume-header" id="tech-skills-and-knowledge-required-along-with-their-challenges">Tech Skills and Knowledge required along with their challenges</h3>
+
+<h4 class="mume-header" id="html">HTML</h4>
+
+<ul>
+<li>Focusing on reinforcing semantic html to convey information and reasoning behind each element in a document rather than merely defining its presentation or look.</li>
+</ul>
+<h4 class="mume-header" id="css">CSS</h4>
+
+<ul>
+<li>Choosing a colour theme to complement each other to define the overall look of the project. Personally, the design aspect is one of my many weaknesses as a developer. To compensate for this weakness, I relied on colour theory to come up with complementing colours. Defining the look of the application on different screen widths proved to be challenging as well and I was able to overcome this challenge by understanding media queries.</li>
+</ul>
+<h4 class="mume-header" id="javascript-and-stimulus-reflex">Javascript and Stimulus Reflex</h4>
+
+<ul>
+<li>At the time of creating this project, I have very little experience with Javascript. I wanted to create a better user experience by implementing a toggle feature in the navigation bar according to the user&apos;s screen width. With appropriate research and practice, I was able to achieve this feature.</li>
+<li>One of the key features of this project is the ability to convert a currency to another in real-time. Using Stimulus Reflex, it not only saved me time implementing this feature but also simplified the underlying concept to it as well.</li>
+</ul>
+<h4 class="mume-header" id="ruby-on-rails">Ruby on Rails</h4>
+
+<ul>
+<li>Ruby on Rails is the server-side web application framework used for this project. It was written in Ruby Language.</li>
+<li>Understanding and implementing the MVC architecture of Rails proved to be challenging when deciding which component should handle certain actions and features in accordance with the &#x201C;Fat Model, Skinny Controller&#x201D; concept.</li>
+<li>Rails Magic sometimes proved to be overwhelming as it is sometimes unsettling to not know what is happening behind the scenes without checking the Rails Source code. This hurdle was crossed after multiple practice attempts and when the documentation was read.</li>
+<li>A number of Ruby Gems were also needed to make this project possible. One of them is the gem Devise. Devise was easy to implement on its own thanks to their wonderful documentation and easy to follow guide, however, to better accommodate the users of this app, I had to customise Devise and that&#x2019;s where one of the challenges came up. Research and understanding the documentation helped out to overcome this challenge.</li>
+</ul>
+<h4 class="mume-header" id="http-methods">HTTP Methods</h4>
+
+<ul>
+<li>Understanding the HTTP actions/methods is vital to a dynamic project. With enough practice and reading, I got comfortable using these methods to manipulate and transfer data from one route to another.</li>
+</ul>
+<h4 class="mume-header" id="git">Git</h4>
+
+<ul>
+<li>Git is a version-control system to track changes in source code during software development. Mistakes happen and sometimes change of mind is imminent. Having git implemented takes the pain away from these situations by allowing you to go back in time to the desired version of your project.</li>
+<li>The most challenging part about implementing git is to remind myself to commit whenever I made a vital change and to put meaningful commit messages.</li>
+</ul>
+<h4 class="mume-header" id="deployment-to-heroku">Deployment to Heroku</h4>
+
+<ul>
+<li>Heroku was one of the recommended cloud platforms to deploy our website to. Understanding error logs was very challenging but fortunately, Heroku has an amazing walk through documentation to guide developers to deploy their website. They also have very helpful fixes to common errors that may come up during deployment.</li>
+</ul>
+<h4 class="mume-header" id="aws-s3">AWS S3</h4>
+
+<ul>
+<li>A service offered by AWS that provides object storage through a web service interface. For this project, AWS S3 was used to remotely store the images uploaded through the app.</li>
+<li>I had some compatibility issues when using S3 to Heroku with regards to access keys. Fortunately, Heroku provided a detailed fix to this issue on their documentation.</li>
+</ul>
+<h3 class="mume-header" id="intangible-skills-and-knowledge-required-along-with-their-challenges">Intangible Skills and Knowledge required along with their challenges</h3>
+
+<h4 class="mume-header" id="planning-and-time-management">Planning and Time Management</h4>
+
+<ul>
+<li>Coming up with this project requires adequate planning. Having a structured plan avoided my chances of being lost during the course of development. It also helped me to stay focused on certain tasks before proceeding to the next.</li>
+<li>Having appropriate time set aside to a certain task promotes task-focus. This skill also allowed me to prioritize more time-consuming features and functionalities thanks to the Trello board I had set up.</li>
+</ul>
+<h4 class="mume-header" id="researching-skill">Researching Skill</h4>
+
+<ul>
+<li>Unfortunately, not everything was handed to me on a silver platter. On some occasions, thorough research to fix an error and find a solution was done to debug a line of code or to implement a key feature. Knowing the proper keywords to search for immensely helped and hastened the process of debugging.</li>
+</ul>
+<h4 class="mume-header" id="presence-of-mind">Presence of Mind</h4>
+
+<ul>
+<li>As I mentioned before, mistakes happen. There have been plenty of situations during development where I find myself stuck and could not figure out the solution to a certain error. I manage to get over this hurdle by taking a step back, taking a breather to calm down and allow my mind to consider different approaches to solve a problem.</li>
+</ul>
+<h5 class="mume-header" id="sourcehttpsgithubcomphilrussel21airgear-aerospace-marketplace"><a href="https://github.com/philrussel21/AirGear-Aerospace-marketplace">Source</a></h5>
+
+<h2 class="mume-header" id="q7-explain-control-flow-using-an-example-from-the-javascript-programming-language">Q7 Explain control flow, using an example from the JavaScript programming language</h2>
+
+<p>Control Flow is the ability to act differently based on the information supplied. This fundamental characteristic makes an application dynamic and adaptable.</p>
+<p>In Javascript the control flow can be demonstrated in two ways: <strong>Selection</strong> or <strong>Repetition</strong></p>
+<h3 class="mume-header" id="selection">Selection</h3>
+
+<p>Selection flow can be further categorised into two: Using If,else if and else or switch case statements.</p>
+<ul>
+<li>If,else if &amp; else</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">const</span> year <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> leapYear <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>year <span class="token operator">&amp;</span> <span class="token punctuation">(</span><span class="token number">100</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> year <span class="token operator">&amp;</span> <span class="token punctuation">(</span><span class="token number">400</span> <span class="token operator">!==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	leapYear <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>year <span class="token operator">%</span> <span class="token number">4</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	leapYear <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+	leapYear <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>The code above translates to : <strong>if</strong> the year can be divided by 100 exactly and cannot be divided by 400 exactly, then the year is not a leap year. <strong>Else</strong>, <strong>if</strong> the year can be divided exactly by 4 then it is a leap year, <strong>else</strong> (otherwise), the year is not a leap year.</p>
+<ul>
+<li>Switch case<br>
+Swtich cases statements on the other hand allows a program to evaluate an expression and attempt to match the expression&#x2019;s value to a case label.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">const</span> mood <span class="token operator">=</span> &#x2018;tired&#x2019;
+<span class="token keyword">switch</span> <span class="token punctuation">(</span>mood<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">case</span> &#x2018;sleepy&#x2019;<span class="token punctuation">:</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>&#x2018;<span class="token constant">I</span> am sleepy&#x2019;<span class="token punctuation">)</span>
+    <span class="token keyword">break</span>
+  <span class="token keyword">case</span> &#x2018;tired&#x2018;<span class="token punctuation">:</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>&#x2018;<span class="token constant">I</span> am tired&#x2019;<span class="token punctuation">)</span>
+    <span class="token keyword">break</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span>
+  &#x201C;<span class="token constant">I</span> am full <span class="token keyword">of</span> energy&#x201D;
+<span class="token punctuation">}</span>
+</pre><p>The code above evaluates the value of the variable mood and tries to match its value to one of the labels followed by the keyword case. If no match is found, the code defaults to the string &#x201C;I am full of energy&#x201D;. The break is to put a stop after running the line of code following the matching case statement otherwise the rest of the code would still run, and in this case, would print.</p>
+<h3 class="mume-header" id="repetition">Repetition</h3>
+
+<p>In some cases, we want to control the number of times a certain behaviour runs, hence repetition. A chunk of code will run repeatedly as long as the condition is met or for a certain number of times.<br>
+Javascript has several types of loops, namely:</p>
+<ul>
+<li>While loop</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+
+<span class="token keyword">while</span> <span class="token punctuation">(</span>count <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	count<span class="token operator">--</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>Continue running the code while the value of count is greater than 0 and each time after printing out the value, reduce the value by one.</p>
+<ul>
+<li>Do...while loop</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	count<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span>count <span class="token operator">!==</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p>Run once before checking if the value of count is not equal to 5. If it is not, then continue running until it is equal to 5.</p>
+<ul>
+<li>For loops</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>For as long as i is less than 5, run the code inside the code block. After every time the code is run, add 1 to the value of i.</p>
+<h5 class="mume-header" id="sourcehttpscoderacademyinstructurecomcourses308pagescontrol-structuresmodule_item_id15879"><a href="https://coderacademy.instructure.com/courses/308/pages/control-structures?module_item_id=15879">Source</a></h5>
+
+<h2 class="mume-header" id="q8-explain-type-coercion-using-examples-from-the-javascript-programming-language">Q8 Explain type coercion, using examples from the JavaScript programming language</h2>
+
+<p>Simply put, type coercion is the process of converting a value from one type to another type. It could be converting a string to a number, an object to a boolean, a number to a string, and so on. Primitive and non-primitive types can be both type coerced. Type coercions can be divided into two categories, explicit and implicit coercion.</p>
+<p>Explicit coercion or type casting is when a developer expresses the intention to convert a value from one type to another. The developer achieves this by writing lines of appropriate code. Common examples of this behaviour is as follows:</p>
+<ul>
+<li><strong>Converting Numbers to Strings</strong>
+<ul>
+<li><code>String(21)</code>
+<ul>
+<li>Converts the number 21 to string &#x2018;21&#x2019;</li>
+</ul>
+</li>
+<li><code>String(variable)</code>
+<ul>
+<li>Given that the variable holds a number value, the method above would return its string value.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Converting Strings to Numbers</strong>
+<ul>
+<li><code>Number(&#x2018;3.14&#x2019;)</code>
+<ul>
+<li>Converts the string &#x2018;3.14&#x2019; to its number value 3.14</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>On the other hand, implicit coercion is when Javascript tries to operate on a wrong data type. It makes the assumption that this type needs to be changed to another so it automatically converts them. The result of this behaviour might not be what the developer always expects. A common example of this is when the == operator is used.<br>
+When using the == operator, if given different data types, javascript would detect that one type is &#x2018;wrong&#x2019; so it converts it to match the other type. To prevent this behaviour, Javascript also provides a strict equality operator (===).</p>
+<h5 class="mume-header" id="sourcehttpswwwfreecodecamporgnewsjs-type-coercion-explained-27ba3d9a2839"><a href="https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/">Source</a></h5>
+
+<h2 class="mume-header" id="q9-explain-data-types-using-examples-from-the-javascript-programming-language">Q9 Explain data types, using examples from the JavaScript programming language</h2>
+
+<p>Javascript is a dynamically typed language which means variables are not directly associated with any particular type and can also be assigned and reassigned. There are two types of data in Javascript, Primitive and Structural.</p>
+<h3 class="mume-header" id="primitives">Primitives:</h3>
+
+<ul>
+<li><strong>String</strong>
+<ul>
+<li>Common type for words, sentences and on the basic level, letters.</li>
+<li><code>&#x201C;Hello, world!&#x201D;</code> is a String</li>
+</ul>
+</li>
+<li><strong>Number</strong>
+<ul>
+<li>Type for numbers, integers and decimals.</li>
+<li><code>21</code> is a Number</li>
+</ul>
+</li>
+<li><strong>Boolean</strong>
+<ul>
+<li>Type for <code>True</code> or <code>False</code></li>
+</ul>
+</li>
+<li><strong>Undefined</strong>
+<ul>
+<li>Type assigned to a recently declared variable in Javascript where the value is not assigned yet.</li>
+<li><code>var variable;</code> would be undefined</li>
+</ul>
+</li>
+<li><strong>BigInt</strong>
+<ul>
+<li>Numeric data type that can represent integers in the arbitrary precision format. It is created by appending n to the end of a number literal.</li>
+<li><code>9007199254740991n</code> is a BigInt</li>
+</ul>
+</li>
+<li><strong>Symbol</strong>
+<ul>
+<li>A data type that represents a unique identifier.</li>
+<li><code>let sym = Symbol()</code> would create a data type symbol</li>
+</ul>
+</li>
+<li><strong>Null</strong>
+<ul>
+<li>A value that represents an intentionally non-existent or invalid object or value.</li>
+<li><code>let n = null</code> would create a variable that has a null value in it.</li>
+</ul>
+</li>
+</ul>
+<p>Primitive types can be checked by the typeof operator which returns the value&#x2019;s type in a string format.</p>
+<h3 class="mume-header" id="structural-types">Structural Types:</h3>
+
+<ul>
+<li><strong>Object reference</strong>
+<ul>
+<li>Mutable data types which means that their value can be changed after it gets created.</li>
+<li><code>Objects</code>, <code>Arrays</code>, <code>Maps</code>, <code>Sets</code>, <code>WeakMap</code>, <code>WeakSet</code>, and <code>Date</code> are all object references.</li>
+</ul>
+</li>
+<li><strong>Function</strong>
+<ul>
+<li>Much like object reference but a non-data structure.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">function</span> <span class="token function">greet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>&#x2018;hello<span class="token punctuation">,</span> world<span class="token operator">!</span>&#x2019;<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</pre><ul>
+<li>typeof greet would return a string <code>&#x2018;function&#x2019;</code></li>
+</ul>
+</li>
+</ul>
+<h5 class="mume-header" id="sources-3">Sources</h5>
+
+<ul>
+<li><a href="https://coderacademy.instructure.com/courses/308/pages/datatypes?module_item_id=15878">Source 1</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures">Source 2</a></li>
+</ul>
+<h2 class="mume-header" id="q10-explain-how-arrays-can-be-manipulated-in-javascript-using-examples-from-the-javascript-programming-language">Q10 Explain how arrays can be manipulated in JavaScript, using examples from the JavaScript programming language</h2>
+
+<p>Arrays are special data structures that hold other values inside. Values inside an array are indexed and are zero-based, meaning the index of the first element always starts at 0. They are wrapped with square brackets ([]) and contain any other type of data, including another array. Values inside an array are referenced using their index.</p>
+<p>These properties and descriptions of an array are pretty common to most programming languages, it only differs on what methods are available to each programming language. Below are different ways and methods of how a Javascript Array can be manipulated.</p>
+<ul>
+<li><code>Array.push()</code>
+<ul>
+<li>Adds the passed value or values to the end of an array which would change the original array.</li>
+</ul>
+</li>
+<li><code>Array.pop()</code>
+<ul>
+<li>Removes and returns the last item of the array.</li>
+</ul>
+</li>
+<li><code>Array.shift()</code>
+<ul>
+<li>Removes and returns the first item of an array.</li>
+</ul>
+</li>
+<li><code>Array.unshift()</code>
+<ul>
+<li>Adds the passed value or values to the front of an array then returns the new length of the array.</li>
+</ul>
+</li>
+<li><code>Array.splice()</code>
+<ul>
+<li>Changes the contents of an array by adding, removing, and inserting values depending on the number of arguments passed to the method.</li>
+</ul>
+</li>
+<li><code>Array.slice()</code>
+<ul>
+<li>Extracts and returns a section of the array depending on the passed starting and ending index.</li>
+</ul>
+</li>
+<li><code>Array.filter()</code>
+<ul>
+<li>Returns a new array depending on the test or matching criteria set up in the callback.</li>
+</ul>
+</li>
+<li><code>Array.map()</code>
+<ul>
+<li>Creates and returns a new array by manipulating the values inside the array defined in the callback function passed.</li>
+</ul>
+</li>
+<li><code>Array.reduce()</code>
+<ul>
+<li>Returns a calculated single value from the element in the array based on the callback function passed.</li>
+</ul>
+</li>
+<li><code>Array.forEach()</code>
+<ul>
+<li>Iterates through every element in the array and applies the callback on all items.</li>
+</ul>
+</li>
+</ul>
+<h5 class="mume-header" id="sourcehttpsdevelopermozillaorgen-usdocswebjavascriptreferenceglobal_objectsarray"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Source</a></h5>
+
+<h2 class="mume-header" id="q11-explain-how-objects-can-be-manipulated-in-javascript-using-examples-from-the-javascript-programming-language">Q11 Explain how objects can be manipulated in JavaScript, using examples from the JavaScript programming language</h2>
+
+<p>Objects, much like Arrays, are special data structures that hold different types of data inside of them, including another object. However, instead of having and being referenced using their index, objects are collections of properties(or keys) and their respective values. They are referenced using these keys to extract their values and these key-value pairs are wrapped in curly-braces ({}).</p>
+<p>Below are different methods of how objects can be manipulated in the Javascript language.</p>
+<ul>
+<li><code>Object.create(obj)</code>
+<ul>
+<li>Returns a newly created object using the passed object as the prototype.</li>
+</ul>
+</li>
+<li><code>Object.values(obj)</code>
+<ul>
+<li>Used to extract all the values of the passed object. The values are returned as an array.</li>
+</ul>
+</li>
+<li><code>Object.keys(obj)</code>
+<ul>
+<li>Used to extract all the keys of the passed object. The keys are returned as an array.</li>
+</ul>
+</li>
+<li><code>Object.entries(obj)</code>
+<ul>
+<li>Returns an array that has nested arrays consisting of the key-value pairs of the object passed.</li>
+</ul>
+</li>
+<li><code>Object.assign(obj1, obj2)</code>
+<ul>
+<li>Returns a new object with the combined key-value pairs from the first object and the second object.</li>
+</ul>
+</li>
+<li><code>Object.freeze(obj)</code>
+<ul>
+<li>Since objects are not primitive data types in Javascript and thus mutable in nature, objects and its elements are allowed to be changed. This method would negate that behaviour by preventing adding of new key-value pairs and would also prohibit modifying existing properties.</li>
+</ul>
+</li>
+</ul>
+<h5 class="mume-header" id="sourcehttpsdevelopermozillaorgen-usdocswebjavascriptreferenceglobal_objectsobject"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Source</a></h5>
+
+<h2 class="mume-header" id="q12-explain-how-json-can-be-manipulated-in-javascript-using-examples-from-the-javascript-programming-language">Q12 Explain how JSON can be manipulated in JavaScript, using examples from the JavaScript programming language.</h2>
+
+<p>JSON stands for Javascript Object Notation, a standard text-based format to represent structured data using the syntax of Javascript&#x2019;s object. Nowadays, it is commonly used as the format to transfer data in web applications like sending some data from the server to the client, or sending the client&#x2019;s data from the client to the server for storage. Even though JSON has Javascript on its name, it can exist and can be stored in its own file with an extension of .json.</p>
+<p>Much like a Javascript object, JSON can store different data types like strings, numbers, arrays, booleans, arrays, and objects. Values can also be extracted from a JSON file depending on its structure, if its an array, using an index, if an object, using its keys.</p>
+<p>There are two Javascript methods commonly used when interacting with JSON files. First being able to convert a string (JSON&#x2019;s format) to an object, and the other does the opposite. These two methods are very useful for transferring and storing data.</p>
+<ul>
+<li><code>JSON.parse(jsonFile)</code>
+<ul>
+<li>Converts the json text string to an object to fully use javascript&#x2019;s method of interacting and manipulating the json&#x2019;s data.</li>
+</ul>
+</li>
+<li><code>JSON.stringify(obj)</code>
+<ul>
+<li>Converts the object to a JSON string to be stored or sent.</li>
+</ul>
+</li>
+</ul>
+<h5 class="mume-header" id="sourcehttpsdevelopermozillaorgen-usdocslearnjavascriptobjectsjson"><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">Source</a></h5>
+
+<h2 class="mume-header" id="q13-for-the-code-snippet-provided-below-write-comments-for-each-line-of-code-to-explain-its-functionality-in-your-comments-you-must-demonstrates-your-ability-to-recognise-and-identify-functions-ranges-and-classes">Q13 For the code snippet provided below, write comments for each line of code to explain its functionality. In your comments you must demonstrates your ability to recognise and identify functions, ranges and classes</h2>
+
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token comment">// creates a Car class object</span>
+<span class="token keyword">class</span> <span class="token class-name">Car</span> <span class="token punctuation">{</span>
+	<span class="token comment">// this Car class expects a brand upon creation</span>
+	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">brand</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// the car brand provided is then saved as a carname attribute to the instance.</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>carname <span class="token operator">=</span> brand<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token comment">// present() is a class instance function that is called on the instance</span>
+	<span class="token function">present</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// this function (or method), when called, would return the string &apos;I have a &apos; and the brand name of the instance</span>
+		<span class="token comment">// when it was created.</span>
+		<span class="token keyword">return</span> <span class="token string">&apos;I have a &apos;</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>carname<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// creates a Model class object that inherits from Car class, thus inheriting the functions of the Car class</span>
+<span class="token keyword">class</span> <span class="token class-name">Model</span> <span class="token keyword">extends</span> <span class="token class-name">Car</span> <span class="token punctuation">{</span>
+	<span class="token comment">// upon creating, Model class instance is expected to have a brand and mod passed to it.</span>
+	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">brand<span class="token punctuation">,</span> mod</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// refers to the parent class and its attribute thus possessing the same attribute carname inherited</span>
+		<span class="token comment">// from its parent (Car) class</span>
+		<span class="token keyword">super</span><span class="token punctuation">(</span>brand<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">// the mod passed upon creation is saved as the instance&apos;s .model attribute</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>model <span class="token operator">=</span> mod<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token comment">// in addition to the the parent class&apos; (Car) functions, the function (or method) below would also be available to the instances</span>
+	<span class="token comment">// created by this class object.</span>
+	<span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// the function calls the .present() method originated from Model&apos;s parent class which should return a string,</span>
+		<span class="token comment">// in addition to that, the string &apos;it was made in &apos; and the instance&apos;s model are appended.</span>
+		<span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">present</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&apos;, it was made in &apos;</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>model<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// creates a variable named makes that holds an array of values</span>
+<span class="token keyword">let</span> makes <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;Ford&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;Holden&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;Toyota&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// two other ways of creating an array is using new Array(arrayLength) constructor and the Array.from(arrayLike, mapFunc)</span>
+<span class="token comment">// new Array(40) would create an array that has a length of 40</span>
+<span class="token comment">// the array created is passed with a function that would fill its index with values (the values of which are from the returned value of the function is in this case is 1980 plus the number of iteration (i))</span>
+<span class="token comment">// thus creating a new array using Array.from()</span>
+<span class="token keyword">let</span> models <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token keyword">from</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> i <span class="token operator">+</span> <span class="token number">1980</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// a declared function that accepts two arguments, a min number and a max number</span>
+<span class="token keyword">function</span> <span class="token function">randomIntFromInterval</span><span class="token punctuation">(</span><span class="token parameter">min<span class="token punctuation">,</span> max</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">// min and max included</span>
+	<span class="token comment">// Math.random() returns a number in between 0 and 1.</span>
+	<span class="token comment">// the difference of max number and min number added by 1 plus the minimum number is then multiplied to the returned number between 0 and 1.</span>
+	<span class="token comment">// finally, it is rounded down to the nearest whole number and is returned out of the function</span>
+	<span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>max <span class="token operator">-</span> min <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> min<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// a new ES6 syntax of looping through an array. Commonly known as the for..of syntax and is used mainly with arrays</span>
+<span class="token comment">// iterates on every element in models array and is assigned to the variable model</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span>model <span class="token keyword">of</span> models<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">// using 0 min number and the makes&apos; array length less 1 as its max number, the number returned from this</span>
+	<span class="token comment">// function is then passed as an index to the makes array which should extract the value from the said array</span>
+	<span class="token comment">// and put in the make variable.</span>
+	make <span class="token operator">=</span> makes<span class="token punctuation">[</span><span class="token function">randomIntFromInterval</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> makes<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token comment">// almost the same as above except through the models array and its attributes and elements.</span>
+	model <span class="token operator">=</span> models<span class="token punctuation">[</span><span class="token function">randomIntFromInterval</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> models<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// creates a new instance of the Model class using the make varible from above as its brand and model from above as its model</span>
+	mycar <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Model</span><span class="token punctuation">(</span>make<span class="token punctuation">,</span> model<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">// logs to the console the returned string from invoking the .show() method on the mycar instance declared in the previous line.</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>mycar<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

@@ -4,7 +4,19 @@
 
 <!-- format: [heading/link name](url) -->
 
-1. [Overview and Description of a standard source control process]()
+1. [Overview and Description of a standard source control process](https://github.com/philrussel21/t3a1#q1-provide-an-overview-and-description-of-a-standard-source-control-process-for-a-large-project)
+1. [Important Aspects of Quality Software](https://github.com/philrussel21/t3a1#q2-what-are-the-most-important-aspects-of-quality-software)
+1. [Standard High Level Structure of MERN Stack](https://github.com/philrussel21/t3a1#q3-outline-a-standard-high-level-structure-for-a-mern-stack-application-and-explain-the-components)
+1. [Knowledge and Skills of a team to develop a website](https://github.com/philrussel21/t3a1#q4-a-team-is-about-to-engage-in-a-project-developing-a-website-for-a-small-business-what-knowledge-and-skills-would-they-need-in-order-to-develop-the-project)
+1. [Knowledge and Skills needed on previous project](https://github.com/philrussel21/t3a1#q5-with-reference-to-one-of-your-own-projects-discuss-what-knowledge-or-skills-were-required-to-complete-your-project-and-to-overcome-challenges)
+1. [Previous Project Evaluation]()
+1. [Javascript Control Flow](https://github.com/philrussel21/t3a1#q7-explain-control-flow-using-an-example-from-the-javascript-programming-language)
+1. [Javascript Type Coercion](https://github.com/philrussel21/t3a1#q8-explain-type-coercion-using-examples-from-the-javascript-programming-language)
+1. [Javascript Data Types](https://github.com/philrussel21/t3a1#q9-explain-data-types-using-examples-from-the-javascript-programming-language)
+1. [Javascript Array Manipulation](https://github.com/philrussel21/t3a1#q10-explain-how-arrays-can-be-manipulated-in-javascript-using-examples-from-the-javascript-programming-language)
+1. [Javascript Object Manipulation](https://github.com/philrussel21/t3a1#q11-explain-how-objects-can-be-manipulated-in-javascript-using-examples-from-the-javascript-programming-language)
+1. [Javascript JSON Manilupation](https://github.com/philrussel21/t3a1#q12-explain-how-json-can-be-manipulated-in-javascript-using-examples-from-the-javascript-programming-language)
+1. [Code debug, comment and review](https://github.com/philrussel21/t3a1#q13-for-the-code-snippet-provided-below-write-comments-for-each-line-of-code-to-explain-its-functionality-in-your-comments-you-must-demonstrates-your-ability-to-recognise-and-identify-functions-ranges-and-classes)
 
 # T3A1 - Workbook Term 3
 
@@ -61,7 +73,7 @@ ISO is an independent, non-governmental international organization that brings t
 ##### Sources
 
 - [Source 1](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010?limit=3&limitstart=0)
-  - ![Software Product Quality]('./docs/Software Product Quality.png')
+  - ![Software Product Quality](docs/Software_Product_Quality.png)
 - [Source 2](https://iso25000.com/index.php/en/)
 
 ## Q3 Outline a standard high level structure for a MERN stack application and explain the components
@@ -97,8 +109,7 @@ This side is where the other techs MongoDB, Node.js and Express are used. MongoD
 ##### Sources
 
 - [Source 1](https://www.bocasay.com/how-does-the-mern-stack-work/)
-
-  - ![MERN Stack]('./docs/MERN Structure.png')
+  ![MERN Stack](docs/MERN_Structure.png)
 
 - [Source 2](https://www.bocasay.com/what-is-the-mern-stack/)
 
@@ -209,6 +220,8 @@ Below is the list of the knowledge and skills I was required to complete this pr
 - As I mentioned before, mistakes happen. There have been plenty of situations during development where I find myself stuck and could not figure out the solution to a certain error. I manage to get over this hurdle by taking a step back, taking a breather to calm down and allow my mind to consider different approaches to solve a problem.
 
 ##### [Source](https://github.com/philrussel21/AirGear-Aerospace-marketplace)
+
+## Q6 With reference to one of your own projects, evaluate how effective your knowledge and skills were for this project, and suggest changes or improvements for future projects of a similar nature
 
 ## Q7 Explain control flow, using an example from the JavaScript programming language
 

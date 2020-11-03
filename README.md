@@ -226,7 +226,8 @@ Below is the list of the knowledge and skills I was required to complete this pr
 **Project:** [AirGear MarketPlace](https://airgear-aerospace.herokuapp.com/)
 
 My knowledge and skills acquired over the Ruby on Rails course was really helpful. I was able to understand the underlying concepts and the behaviour of components inside Rails. The overall MVC architecture made a lot of sense and served as the guideline to better apply Rails’ “convention over configuration”.
-Some improvements I can think of would be setting up a messaging system, implementation of a payment system with the help of Stripe, and OAuth with Google or Microsoft (Two of the most used systems in a business environment). Currently, businesses who choose to use the app would still rely on their chosen messaging system to effectively communicate with other businesses. They would also need to open another application to process the payment. I think it would be great if I can integrate them both in the app to complete the whole user experience. To streamline the process of sign up and to lessen the number of user sign ins businesses need to keep track of, implementing OAuth comes to mind to solve this issue.
+
+Some improvements I can think of would be setting up a messaging system, implementation of a payment system with the help of Stripe, and OAuth with Google or Microsoft (two of the most used systems in a business environment). Currently, businesses who choose to use the app would still rely on their chosen messaging or email system to effectively communicate with other businesses. They would also need to open another application to process the payment. I think it would be great if I can integrate them both in the app to complete the whole user experience. To streamline the process of sign up and to lessen the number of user sign ins businesses need to keep track of, implementing OAuth comes to mind to solve this issue.
 
 Among other things, the changes that I can make to the app would be the whole UI/UX. I spent more time implementing the overall features and functionality of the app and not enough time to its front end.
 
@@ -314,7 +315,7 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-For as long as i is less than 5, run the code inside the code block. After every time the code is run, add 1 to the value of i.
+For as long as `i` is less than 5, run the code inside the code block. After every time the code is run, add 1 to the value of `i`.
 
 ##### [Source](https://coderacademy.instructure.com/courses/308/pages/control-structures?module_item_id=15879)
 
@@ -322,18 +323,18 @@ For as long as i is less than 5, run the code inside the code block. After every
 
 Simply put, type coercion is the process of converting a value from one type to another type. It could be converting a string to a number, an object to a boolean, a number to a string, and so on. Primitive and non-primitive types can be both type coerced. Type coercions can be divided into two categories, explicit and implicit coercion.
 
-Explicit coercion or type casting is when a developer expresses the intention to convert a value from one type to another. The developer achieves this by writing lines of appropriate code. Common examples of this behaviour is as follows:
+**Explicit coercion** or type casting is when a developer expresses the intention to convert a value from one type to another. The developer achieves this by writing lines of appropriate code. Common examples of this behaviour is as follows:
 
 - **Converting Numbers to Strings**
   - `String(21)`
-    - Converts the number 21 to string ‘21’
+    - Converts the number `21` to string `‘21’`
   - `String(variable)`
-    - Given that the variable holds a number value, the method above would return its string value.
+    - Given that the `variable` holds a number value, the method above would return its string value.
 - **Converting Strings to Numbers**
   - `Number(‘3.14’)`
-    - Converts the string ‘3.14’ to its number value 3.14
+    - Converts the string `‘3.14’` to its number value `3.14`
 
-On the other hand, implicit coercion is when Javascript tries to operate on a wrong data type. It makes the assumption that this type needs to be changed to another so it automatically converts them. The result of this behaviour might not be what the developer always expects. A common example of this is when the == operator is used.
+On the other hand, **implicit coercion** is when Javascript tries to operate on a wrong data type. It makes the assumption that this type needs to be changed to another so it automatically converts them. The result of this behaviour might not be what the developer always expects. A common example of this is when the == operator is used.
 When using the == operator, if given different data types, javascript would detect that one type is ‘wrong’ so it converts it to match the other type. To prevent this behaviour, Javascript also provides a strict equality operator (===).
 
 ##### [Source](https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/)
@@ -351,21 +352,21 @@ Javascript is a dynamically typed language which means variables are not directl
   - Type for numbers, integers and decimals.
   - `21` is a Number
 - **Boolean**
-  - Type for `True` or `False`
+  - Type for `true` or `false`
 - **Undefined**
   - Type assigned to a recently declared variable in Javascript where the value is not assigned yet.
-  - `var variable;` would be undefined
+  - `var variable;` would be `undefined`
 - **BigInt**
-  - Numeric data type that can represent integers in the arbitrary precision format. It is created by appending n to the end of a number literal.
+  - Numeric data type that can represent integers in the arbitrary precision format. It is created by appending `n` to the end of a number literal.
   - `9007199254740991n` is a BigInt
 - **Symbol**
   - A data type that represents a unique identifier.
   - `let sym = Symbol()` would create a data type symbol
 - **Null**
   - A value that represents an intentionally non-existent or invalid object or value.
-  - `let n = null` would create a variable that has a null value in it.
+  - `let n = null` would create a variable that has a `null` value in it.
 
-Primitive types can be checked by the typeof operator which returns the value’s type in a string format.
+Primitive types can be checked by the `typeof` operator which returns the value’s type in a string format.
 
 ### Structural Types:
 
@@ -392,26 +393,28 @@ Arrays are special data structures that hold other values inside. Values inside 
 
 These properties and descriptions of an array are pretty common to most programming languages, it only differs on what methods are available to each programming language. Below are different ways and methods of how a Javascript Array can be manipulated.
 
-- `Array.push()`
-  - Adds the passed value or values to the end of an array which would change the original array.
-- `Array.pop()`
-  - Removes and returns the last item of the array.
-- `Array.shift()`
-  - Removes and returns the first item of an array.
-- `Array.unshift()`
-  - Adds the passed value or values to the front of an array then returns the new length of the array.
-- `Array.splice()`
-  - Changes the contents of an array by adding, removing, and inserting values depending on the number of arguments passed to the method.
-- `Array.slice()`
-  - Extracts and returns a section of the array depending on the passed starting and ending index.
-- `Array.filter()`
-  - Returns a new array depending on the test or matching criteria set up in the callback.
-- `Array.map()`
-  - Creates and returns a new array by manipulating the values inside the array defined in the callback function passed.
-- `Array.reduce()`
-  - Returns a calculated single value from the element in the array based on the callback function passed.
-- `Array.forEach()`
-  - Iterates through every element in the array and applies the callback on all items.
+**`const array = [1,2,3,4,5]`**
+
+- `array.push(6)`
+  - Adds the passed value or values to the end of an array which would change the original array. Returns the newly added element in the array. Returns `6`
+- `array.pop()`
+  - Removes and returns the last item of the array. Returns `6`
+- `array.shift()`
+  - Removes and returns the first item of an array. Returns `1`
+- `array.unshift(0)`
+  - Adds the passed value or values to the front of an array then returns the new length of the array. Returns `5`
+- `array.splice(1)`
+  - Changes the contents of an array by adding, removing, and inserting values depending on the number of arguments passed to the method. Returns the updated value of the array. Returns `[2,3,4,5]`
+- `array.slice(2)`
+  - Extracts and returns a section of the array depending on the passed starting and ending index. Returns `[4,5]`
+- `array.filter((num) => num %% 2 === 0)`
+  - Returns a new array depending on the test or matching criteria set up in the callback. Returns `[2,4]`
+- `array.map((num) => num * 2)`
+  - Creates and returns a new array by manipulating the values inside the array defined in the callback function passed. Returns `[4,6,8,10]`
+- `array.reduce((a, e) => a + e)`
+  - Returns a calculated single value from the element in the array based on the callback function passed. Returns `14`
+- `array.forEach((num) => console.log(num))`
+  - Iterates through every element in the array and applies the callback on all items. Returns `undefined` but logs every number in the terminal.
 
 ##### [Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
@@ -421,14 +424,16 @@ Objects, much like Arrays, are special data structures that hold different types
 
 Below are different methods of how objects can be manipulated in the Javascript language.
 
+**`const obj = {b: 'blue', r: 'red'}`**
+
 - `Object.create(obj)`
   - Returns a newly created object using the passed object as the prototype.
 - `Object.values(obj)`
-  - Used to extract all the values of the passed object. The values are returned as an array.
+  - Used to extract all the values of the passed object. The values are returned as an array. Returns `["blue","red"]`
 - `Object.keys(obj)`
-  - Used to extract all the keys of the passed object. The keys are returned as an array.
+  - Used to extract all the keys of the passed object. The keys are returned as an array. Returns `["b","r"]`
 - `Object.entries(obj)`
-  - Returns an array that has nested arrays consisting of the key-value pairs of the object passed.
+  - Returns an array that has nested arrays consisting of the key-value pairs of the object passed. Returns `[["b", "blue"], ["r", "red"]]`
 - `Object.assign(obj1, obj2)`
   - Returns a new object with the combined key-value pairs from the first object and the second object.
 - `Object.freeze(obj)`

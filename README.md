@@ -499,6 +499,7 @@ let makes = ['Ford', 'Holden', 'Toyota'];
 // new Array(40) would create an array that has a length of 40
 // the array created is passed with a function that would fill its index with values (the values of which are from the returned value of the function is in this case is 1980 plus the number of iteration (i))
 // thus creating a new array using Array.from()
+// this code below would essentially create a range from 1980 to 2019, considering the starting point (1980) and the number of times or the overall length of the array(40).
 let models = Array.from(new Array(40), (x, i) => i + 1980);
 
 // a declared function that accepts two arguments, a min number and a max number

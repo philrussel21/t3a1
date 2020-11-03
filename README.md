@@ -223,6 +223,13 @@ Below is the list of the knowledge and skills I was required to complete this pr
 
 ## Q6 With reference to one of your own projects, evaluate how effective your knowledge and skills were for this project, and suggest changes or improvements for future projects of a similar nature
 
+**Project:** [AirGear MarketPlace](https://airgear-aerospace.herokuapp.com/)
+
+My knowledge and skills acquired over the Ruby on Rails course was really helpful. I was able to understand the underlying concepts and the behaviour of components inside Rails. The overall MVC architecture made a lot of sense and served as the guideline to better apply Rails’ “convention over configuration”.
+Some improvements I can think of would be setting up a messaging system, implementation of a payment system with the help of Stripe, and OAuth with Google or Microsoft (Two of the most used systems in a business environment). Currently, businesses who choose to use the app would still rely on their chosen messaging system to effectively communicate with other businesses. They would also need to open another application to process the payment. I think it would be great if I can integrate them both in the app to complete the whole user experience. To streamline the process of sign up and to lessen the number of user sign ins businesses need to keep track of, implementing OAuth comes to mind to solve this issue.
+
+Among other things, the changes that I can make to the app would be the whole UI/UX. I spent more time implementing the overall features and functionality of the app and not enough time to its front end.
+
 ## Q7 Explain control flow, using an example from the JavaScript programming language
 
 Control Flow is the ability to act differently based on the information supplied. This fundamental characteristic makes an application dynamic and adaptable.
